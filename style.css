@@ -1,0 +1,190 @@
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* Neutral */
+
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+
+  /* - Weights: 400, 500, 700 */
+  --Weight-4: 400;
+  --Weight-5: 500;
+  --Weight-7: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  outline: 1px dashed red;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  position: relative;
+}
+
+/* Background pathern section */
+.bg-pathern-desktop-top {
+  position: absolute;
+  top: 5rem;
+  left: 20rem;
+}
+
+.bg-pathern-desktop-bottom {
+  position: absolute;
+  top: 35rem;
+  left: 40rem;
+}
+/* mobile */
+.bg-pathern-mobile-top {
+  display: none;
+}
+.bg-pathern-mobile-bottom {
+  display: none;
+}
+/* main social proof container */
+.social-proof {
+  max-width: 1440px;
+  width: 70%;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+/* header and Rate Section */
+.head-rate {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Title and Paragraph section */
+.title-paragraph {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.title {
+  max-width: 50%;
+  font-size: 2.5rem;
+  font-weight: var(--Weight-7);
+  color: var(--Dark-Magenta);
+}
+
+.paragraph {
+  max-width: 63%;
+  line-height: 1.35rem;
+  font-size: 1rem;
+  color: var(--Dark-Magenta);
+}
+
+/* Rates Section */
+.rates-container {
+  display: flex;
+  row-gap: 0.65rem;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.rate {
+  width: fit-content;
+  display: flex;
+  column-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Light-Grayish-Magenta);
+  padding: 0.65rem;
+  border-radius: 0.15rem;
+}
+
+/* adjusting the positioning each of the rate containers */
+
+.rate:first-child {
+  margin-right: 4rem;
+}
+
+.rate:nth-child(2) {
+  margin-right: 1rem;
+}
+
+.star {
+  display: flex;
+  column-gap: 0.65rem;
+}
+
+.rate-text {
+  font-size: 1rem;
+  white-space: nowrap;
+  font-weight: var(--Weight-7);
+  color: var(--Dark-Magenta);
+}
+
+/* Testimony Section */
+.testimony-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.testimony {
+  height: fit-content;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  border-radius: 0.35rem;
+  color: var(--Light-Grayish-Magenta);
+  background-color: var(--Dark-Magenta);
+}
+
+.profile {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.img-profile {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 3rem;
+}
+
+.name-status {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  & .name {
+    font-size: 1.15rem;
+  }
+  & .status {
+    color: var(--Soft-Pink);
+  }
+}
+
+.statement {
+  line-height: 1.35rem;
+  font-weight: var(--Weight-4);
+}
+
+/* Adjusting the Positional of each testimony-container */
+.testimony:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.testimony:last-child {
+  margin-top: 2rem;
+}
